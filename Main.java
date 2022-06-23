@@ -15,7 +15,7 @@ public class Main {
         random = new Random();
         scanner = new Scanner(System.in);
         numberOfTries = 0;
-        randomNumber();
+        secretNumber = randomNumber();
         System.out.println("Hello! What is your name");
         userName = scanner.nextLine();
         System.out.println("Well, " + userName + ", I am thinking of a number between 1 and 20.\n");
@@ -23,8 +23,8 @@ public class Main {
     }
 
     // Generates the secret number.
-    private static void randomNumber() {
-        secretNumber = random.nextInt(20)+1;
+    private static int randomNumber() {
+        return random.nextInt(20)+1;
     }
 
     // Used after a game is complete. User has the option to play again
